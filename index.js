@@ -7,6 +7,11 @@ app.get("/", function (req, res) {
   res.json(webhookData);
 });
 
+app.get("/clear", function (req, res) {
+  webhookData = {};
+  res.json(webhookData);
+});
+
 app.post("/", function (req, res) {
   webhookData.headers = req.headers;
   webhookData.body = req.body;
