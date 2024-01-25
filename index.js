@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 app.use(express.json());
 
-const webhookData = {};
+let webhookData = {};
 app.get("/", function (req, res) {
   res.json(webhookData);
 });
